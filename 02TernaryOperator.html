@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator</title>
+</head>
+<body>
+    <h1>Ternary Operator</h1>
+    <p>The conditional (ternary) operator is the only JavaScript operator that takes <br>
+        three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), <br> and finally the expression to execute if the condition is falsy. This operator is frequently used as an alternative to an if...else statement.</p>
+    <p> Syntax: <br>
+        let result = condition ? value1 : value2;</p>
+
+    <script>
+        let age = prompt("What is your Age : ")
+        const permit = age>18 ? "You can Drive!": "You can't Drive!"
+        alert(permit);
+        // age > 18 ? alert("you can Drive"): alert("you can't Drive")     //this condition can also be Written
+    </script>
+</body>
+</html>

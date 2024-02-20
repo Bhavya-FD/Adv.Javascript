@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Strict</title>
+</head>
+<body>
+    <h1>Use Strict</h1>
+    <p>&bull;To invoke strict mode for an entire script, put the exact statement "use strict"; (or 'use strict';) before any other statements.</p>
+    <p>&bull;When it is located at the top of a script, the whole script works the “modern” way.</p>
+    <p>&bull;Eliminates some JavaScript silent errors by changing them to throw errors.</p>
+    <h2>Strict mode for functions</h2>
+    <p>&bull;Likewise, to invoke strict mode for a function, put the exact statement "use strict"; (or 'use strict';) in the function's body before any other statements.</p>
+    <p>&bull;The "use strict" directive can only be applied to the body of functions with simple parameters. Using "use strict" in functions with rest, default, or destructured parameters is a syntax error.</p>
+    <script>
+        // a = 10
+        // console.log(a);    //Output will be 10
+
+
+        // Whole-script strict mode syntax
+        
+        // "use strict"
+        let b = 20
+        console.log(b);        //20
+
+        a = 10
+        console.log(a);      // ReferenceError: a is not defined
+
+
+        function myNotStrictFunction() {
+            console.log("I'm not strict.");
+            Name = "Bhavya";
+            console.log(Name);
+        }
+        myNotStrictFunction();             //function is being Called
+
+        // This is a Function with "use strict" mode
+        function myStrictFunction() {
+        // Function-level strict mode syntax
+        "use strict";
+        function nested() {
+            return "And so am I";
+        }
+            console.log(`Hi! I'm a strict mode function! ${nested()}`);    //
+            userName = "Bhavya";
+            console.log(userName);
+        }
+        myStrictFunction();              //function is being Called
+        
+
+    </script>
+</body>
+</html>
