@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in Javascript</title>
+</head>
+<body>
+    <h1>Function in Javascript</h1>
+    <h2>Function</h2>
+    <p>Functions are the Heart of JavaScript</p>
+    <p>Functions are one of the fundamental building blocks in JavaScript.</p>
+    <p>to Create a function we need: <br>
+    1. The name of the function. <br>
+    2. A list of parameters to the function, enclosed in parentheses and separated by commas. <br>
+    3. The JavaScript statements that define the function, enclosed in curly braces, { /* … */ }.</p>
+    <p><b>Syntex:</b>
+    <pre>
+        function functionName(param1,param2) {
+            return param1 + param2;
+        }
+    </pre></p>
+
+    <h2>Calling Function:</h2>
+    <p>Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called. <br>
+        Calling the function actually performs the specified actions with the indicated parameters.</p>
+    
+    <h2>Function Scope:</h2>
+    <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined <br>
+    only in the scope of the function i.e. <b>Function Scope/Local Scope</b>. However, a function can access all variables and 
+    functions defined inside the scope in which it is defined. <br>
+    a function defined in the global scope can access all variables defined in the <b>global scope</b>. </p>
+    
+    <h2>Function Expression/Anonymous Function:</h2>
+    <p>While the function declaration above is syntactically a statement, functions can also be created by a function expression. <br>
+       Such a function can be anonymous; it does not have to have a name.</p>
+    
+    
+
+
+
+    <script>
+        // Function:
+        // this is a Simple Function
+        function myFunc() {
+            let a = 10
+            let b = 15
+            console.log(a+b);
+        }
+        myFunc();                   //function has been called here
+
+        // This is a Function with Parameters
+        function funcWithParams(a,b) {
+            a = 20
+            b = 15
+            console.log(a+b);
+        }
+        // Calling Function:
+        funcWithParams();
+
+        
+        // Local variables
+        // A variable declared inside a function is only visible inside that function.
+        function local() {
+            let num = 10
+            console.log(num);
+        }
+        local()
+
+        // Outer
+        // A function can access an outer variable as well.
+        let number = 20
+        function outer() {
+            console.log(number);
+        }
+        outer()
+
+        // Parameters in Function
+        //while Declaring a function we pass some parameter in the parenthesis (para1, para2)
+        function twoNumber(a, b) {
+            console.log(a + b);
+            console.log(a - b);
+            // console.log(a * b);
+            // console.log(a / b);
+        }
+        // while Calling a function we pass some Arguments in the parenthesis (arg1, arg2)
+        twoNumber(10,5)
+        twoNumber(10,4)
+        twoNumber(10,3)
+        twoNumber(10,2)
+
+        // Default Value
+        function addNumber(a , b = 10 , c = " This is an Addition") {
+            console.log(a+b+c);
+        }
+        addNumber(20);
+        addNumber(20,5);
+
+        // Anonymous Function/ Function Expression
+        // function () {
+        //     console.log("This is a Function");        //SyntaxError: Function statements require a function name
+        // }
+
+        const funcExp = function () {
+            console.log("This is a Function");
+        }
+        funcExp();
+    </script>    
+</body>
+</html>

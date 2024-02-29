@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword in JavaScript</title>
+</head>
+<body>
+    <h1>This Keyword in JavaScript</h1>
+    <p>&bull;In non-strict mode, <b>this</b> is always a reference to an object. In strict mode, it can be any value. <br>
+        &bull;The value of this depends on in which context it appears: <b>function, class, or global.</b>
+    </p>
+
+    <script>
+        // "use strict"
+        function getThis() {
+            return this;
+        }
+        const value = {name : 'bhavya'}
+        value.getThis = getThis()
+        
+        // alert(value.getThis)
+        console.log(value.getThis);
+    </script>
+</body>
+</html>

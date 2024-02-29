@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in Advance JS</title>
+</head>
+<body>
+    <h1>Loops in Advance JS</h1>
+
+    <script>
+        const a = ["array",1,2,3,4,5,6]
+        console.log(a);
+        // For Loop
+        for (let i = 1; i <=10; i++) {
+            console.log(i);
+        }                               //Expected Output will be a sequence of 1 to 10
+        for (let index = 0; index < a.length; index++) {
+            const element = a[index];
+            console.log(element);
+        }
+        
+        
+        // For each 
+        const colors = ["Red","Green","Blue","Pink"]
+        colors.forEach(element => {
+            console.log(element);
+        });
+        a.forEach(element => {
+           console.log(element); 
+        });
+
+        // for in
+        let biodata = {
+            Name : "Bhavya Gandhi",
+            Age : 27,
+            Work : "Trainee",
+            Contact : 632628782,
+            email : "Bhavya@yahoo.com"
+        }
+        for (const a in biodata) {                                     //a = property , biodata = object
+                const element = biodata[a];
+                console.log(`${a} : ${biodata[a]}`);                   //${a}=property , ${biodata[a]=value of property}  
+                document.write(`${a} : ${biodata[a]}`+"<br>");         
+        }
+        console.log("WE HAVE DELETED A PROPERTY(Work) IN NEXT ARRAY.");
+        for (const a in biodata) {                                          //a = property , biodata = object
+                const element = biodata[a];
+                console.log(`${a} : ${biodata[a]}`);
+                delete biodata.Work; 
+        }
+
+        // for of
+        console.log("THIS IS THE ITERATOR OF ARRAY[colors]");
+        for (const iterator of colors) {
+            console.log(iterator);   
+        }
+        console.log("THIS IS THE ITERATOR OF ARRAY[a]");
+        for (const iterator of a) {
+            console.log(iterator);   
+        }
+
+    </script>
+</body>
+</html>

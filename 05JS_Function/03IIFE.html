@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE </title>
+</head>
+<body>
+    <h1>IIFE(immediately invoked function expression)</h1>
+    <p>An immediately invoked function expression, or IIFE (pronounced iffy), is a function that is called immediately after it is defined.</p>
+    <p><b>Syntax:</b></p>
+    <pre>
+        (function (){ 
+            Function Logic Here. 
+        })();
+    </pre>
+
+    <script>
+        // This is a Normal Function
+       function greet() {
+        console.log("First Function!");
+      }
+      greet();
+      
+    //   This is an IIFE
+      (function myfunc() {
+        console.log("Namaste Bharat");
+        console.log("Namaste Bharat");
+      })();
+      
+
+      //   First parenthesis used for understanding that this is IIFE function
+      // Second Parenthesis is used to call the IIFE function
+    </script>
+</body>
+</html>
